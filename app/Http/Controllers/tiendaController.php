@@ -13,6 +13,10 @@ class tiendaController extends Controller
     	return view('registrarCliente');
     }
 
+    public function inicioSesion(){
+        return view('inicioSesion');
+    }
+
      public function guardar(Request $datos){
     	// $cliente = new Cliente();
     	// $cliente->nombre=$datos->input('nombre');

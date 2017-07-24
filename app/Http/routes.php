@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/registrarCliente', 'tiendaController@registrarC');
+Route::get('/inicioSesion', 'tiendaController@inicioSesion');
 
 Route::post('/guardarCliente', 'tiendaController@guardar');
 

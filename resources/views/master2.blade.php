@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header" id="home">
 	<div class="container">
 		<ul>
-			<li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Iniciar sesión </a></li>
+			<li> <a href="{{url('/inicioSesion')}}"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Iniciar sesión </a></li>
 			<li> <a href="{{url('/registrarCliente')}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Regitrarse </a></li>
 		</ul>
 	</div>

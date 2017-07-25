@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header-bot_inner_wthreeinfo_header_mid">
 		<!-- header-bot -->
 			<div class="col-md-4 logo_agile">
-				<h1><a href="{{url('/')}}"> <img src="imagenes/3.png"></a></h1>
+				<h1><a href="{{url('/')}}"> <img src="imagenes/3.png" id="imagenLogo"></a></h1>
 			</div>
         <!-- header-bot -->
 

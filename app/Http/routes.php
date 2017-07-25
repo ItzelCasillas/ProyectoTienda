@@ -19,6 +19,9 @@ Route::get('/registrarCliente', 'tiendaController@registrarC');
 Route::get('/inicioSesion', 'tiendaController@inicioSesion');
 Route::post('/guardarCliente', 'tiendaController@guardar');
 
+Route::get('/vistaAdmin', 'tiendaController@vistaAdmin');
+
+
 Route::get('/admin', function (){
 	echo "master";
 })->middleware('auth');

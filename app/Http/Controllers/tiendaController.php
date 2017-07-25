@@ -17,6 +17,11 @@ class tiendaController extends Controller
         return view('inicioSesion');
     }
 
+    public function vistaAdmin(){
+      // $clientes=Cliente::all();
+      return view('admin');
+    }
+
      public function guardar(Request $datos){
     	// $cliente = new Cliente();
     	// $cliente->nombre=$datos->input('nombre');

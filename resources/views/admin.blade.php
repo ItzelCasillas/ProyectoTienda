@@ -51,12 +51,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="mens.html"><img src="imagenes/carrusel/6.jpg" alt=" "/></a>
+										<a href="mens.html"><img src="imagenes/carrusel/6.jpg" alt=""/></a>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Alta Producto</a></li>
-											<li><a href="mens.html"></a>Consulta Productos</li>
+											<li><a href="">Alta Producto</a></li>
+											<li><a href=""></a>Consulta Productos</li>
 										</ul>
 									</div>
 									<!-- <div class="col-sm-3 multi-gd-img">
@@ -97,9 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<li><a href="womens.html">Makeup Geek</a></li>
 										</ul>
 									</div> -->
-									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.html"><img src="imagenes/carrusel/LIPBEAUTY.jpg" alt=" "/></a>
-									</div>
+									
 									<div class="clearfix"></div>
 								</div>
 							</ul>

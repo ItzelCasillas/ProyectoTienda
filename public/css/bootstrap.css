@@ -1118,7 +1118,8 @@ figure {
   margin: 0;
 }
 img {
-  vertical-align: middle;
+float: left;
+  width: 180px;
 }
 .img-responsive,
 .thumbnail > img,
@@ -4412,6 +4413,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a {
   color: #777;
+  /*z-index: 4;*/
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -4538,7 +4540,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #101010;
+  border-color: white;
+  background-color: white;
+  z-index: -1;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
@@ -4882,7 +4886,8 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding: 48px 0;
+   /* padding: 48px 0;*/
+   margin: 40px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {

@@ -69,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="menu__item dropdown menu__item--current">
 					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Productos <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="">Alta Productos</a></li>
+									<li><a href="{{url('/consultarEncargados')}}">Alta Productos</a></li>
 									<li><a href="">Inventario</a></li>
 								</ul>
 					</li>

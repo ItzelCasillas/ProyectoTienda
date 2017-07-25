@@ -72,4 +72,8 @@ class tiendaController extends Controller
          return redirect('/consultarCat');
    }
 
+   public function registrarP(){
+        return view('registrarProductos');
+    }
+
 }

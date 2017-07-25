@@ -6,9 +6,7 @@
     <div class="form-group">
         <label for="id_categoria">Categoría:</label>
         <select name="puesto_id" class="form-control">
-            @foreach($categorias as $c)
-                <option value="{{$c->id}}">{{$c->nombre}}</option>
-            @endforeach
+            
         </select>
     </div>
     <div class="form-group">

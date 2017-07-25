@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header-bot_inner_wthreeinfo_header_mid">
 		<!-- header-bot -->
 			<div class="col-md-4 logo_agile">
-				<h1><a href="{{url('/')}}"> <img src="imagenes/3.png" id="imagenLogo"></a></h1>
+				<h1><a href="{{url('/')}}"> <img src="imagenes/3.png"></a></h1>
 			</div>
         <!-- header-bot -->
 
@@ -69,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="menu__item dropdown menu__item--current">
 					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Productos <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="{{url('/consultarEncargados')}}">Alta Productos</a></li>
+									<li><a href="{{url('/altaProductos')}}">Alta Productos</a></li>
 									<li><a href="">Inventario</a></li>
 								</ul>
 					</li>

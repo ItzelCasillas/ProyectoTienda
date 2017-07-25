@@ -33,8 +33,6 @@ class tiendaController extends Controller
     	// return redirect('/');
 
     }
-
-
    public function registrarCat(){
         $categories=Category::all();
         return view('registrarCat', compact('categories'));

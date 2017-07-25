@@ -58,7 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<li><a href="">Alta Producto</a></li>
 											<li><a href=""></a>Consulta Productos</li>
 										</ul>
-									</div>
+									</div> 
+
 									<!-- <div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
 											<li><a href="mens.html">Jewellery</a></li>

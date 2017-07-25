@@ -27,18 +27,11 @@ Route::get('/admin', function (){
 })->middleware('auth');
 
 
-Route::auth();
 
 Route::get('/master', 'HomeController@index')->name('master');
 
-Route::auth();
+
 
 Route::get('/home', 'HomeController@index');
 
 Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');

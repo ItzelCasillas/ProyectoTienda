@@ -39,6 +39,8 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -62,10 +64,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        dd($data);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'rol' => 1,
         ]);
+    }
+
+        public function redirectTo(){
+        if(auth()->user()->rol==1){
+            return '/admin';
+        }
+        else{
+            return '/master';
+        }
     }
 }

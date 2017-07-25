@@ -88,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<li><a href="womens.html">Lime Crime</a></li>
 											<li><a href="womens.html">Makeup Forever</a></li>
 											<li><a href="womens.html">Makeup Geek</a></li>
-											<li><a href="womens.html">Urban Decay</a></li>
+												<li><a href="womens.html">Urban Decay</a></li>
 										</ul>
 									</div>
 								<!-- 	<div class="col-sm-3 multi-gd-img">

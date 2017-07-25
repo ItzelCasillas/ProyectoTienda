@@ -1119,6 +1119,10 @@ figure {
 }
 img {
 float: left;
+}
+
+#imagenLogo{
+  float: left;
   width: 180px;
 }
 .img-responsive,

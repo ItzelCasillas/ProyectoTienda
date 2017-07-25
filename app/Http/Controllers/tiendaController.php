@@ -34,8 +34,10 @@ class tiendaController extends Controller
 
     }
 
-    class encargadosController extends Controller
-{
+    // class encargadosController extends Controller{
+        
+    // }
+
    public function registrarCat(){
         $categories=Category::all();
         return view('registrarCat', compact('categories'));

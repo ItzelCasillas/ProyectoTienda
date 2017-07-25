@@ -17,17 +17,16 @@ Route::get('/', function () {
 
 Route::get('/registrarCliente', 'tiendaController@registrarC');
 Route::get('/inicioSesion', 'tiendaController@inicioSesion');
+Route::post('/guardarCliente', 'tiendaController@guardar');
 
 Route::get('/admin', function (){
 	echo "master";
 })->middleware('auth');
 
 
-Route::post('/guardarCliente', 'tiendaController@guardar');
-
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/master', 'HomeController@index')->name('master');
 
 Route::auth();
 

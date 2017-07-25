@@ -25,7 +25,7 @@
     </div>
     <div class="form-group">
         <label for="precio">Imagen:</label>
-        <input type="number" class="form-control" name="precio" required>
+        <input type="text" class="form-control" name="imagen" required>
     </div>
 
     <div>

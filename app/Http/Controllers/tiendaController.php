@@ -34,9 +34,6 @@ class tiendaController extends Controller
 
     }
 
-    // class encargadosController extends Controller{
-        
-    // }
 
    public function registrarCat(){
         $categories=Category::all();

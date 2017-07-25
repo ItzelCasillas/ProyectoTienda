@@ -18,7 +18,16 @@ Route::get('/', function () {
 Route::get('/registrarCliente', 'tiendaController@registrarC');
 Route::get('/inicioSesion', 'tiendaController@inicioSesion');
 
+Route::get('/admin', function (){
+	echo "master";
+})->middleware('auth');
+
+
 Route::post('/guardarCliente', 'tiendaController@guardar');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
 
 Route::auth();
 

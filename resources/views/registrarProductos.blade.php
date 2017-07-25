@@ -1,12 +1,13 @@
 @extends('master2')
 
 @section('contenido')
-<form action="{{url('/')}}" method="POST">
+<form action="{{url('/guardarProducto')}}" method="POST">
 <input id="token" type="hidden" name="_token" value="{{csrf_token() }}">
+
     <div class="form-group">
         <label for="id_categoria">Categoría:</label>
-        <select name="puesto_id" class="form-control">
-            
+        <select name="id_categoria" class="form-control">
+            <option value="1">1</option>
         </select>
     </div>
     <div class="form-group">
@@ -18,11 +19,15 @@
         <input type="text" class="form-control" name="descripcion" required>
     </div>
     <div class="form-group">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" class="form-control" name="cantidad" required>
+    </div>
+    <div class="form-group">
         <label for="precio">Precio:</label>
         <input type="number" class="form-control" name="precio" required>
     </div>
     <div class="form-group">
-        <label for="precio">Imagen:</label>
+        <label for="imagen">Imagen:</label>
         <input type="text" class="form-control" name="imagen" required>
     </div>
 

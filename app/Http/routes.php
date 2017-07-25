@@ -30,6 +30,8 @@ Route::get('/admin', function (){
 
 Route::get('/master', 'HomeController@index')->name('master');
 Route::get('/altaProductos', 'tiendaController@registrarP');
+Route::post('/guardarProducto', 'tiendaController@guardarP');
+Route::get('/consultarProducto', 'tiendaController@consultarP');
 
 Route::get('/home', 'HomeController@index');
 

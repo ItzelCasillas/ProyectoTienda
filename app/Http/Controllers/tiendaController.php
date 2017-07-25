@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Producto;
 
 class tiendaController extends Controller
 {
@@ -43,7 +44,7 @@ class tiendaController extends Controller
         return view('registrarCat', compact('categories'));
    }
 
-   public function guardarCat(Requestd $datos){
+   public function guardarCat(Request $datos){
        $categories = new Category();
          $categories->nombre=$datos->input('name');
         $categories->save();
@@ -75,5 +76,22 @@ class tiendaController extends Controller
    public function registrarP(){
         return view('registrarProductos');
     }
+
+    public function guardarP(Request $datos){
+       $nuevo = new Producto();
+        $nuevo->nombre=$datos->input('nombre');
+        $nuevo->descripcion=$datos->input('descripcion');
+        $nuevo->cantidad=$datos->input('cantidad');
+        $nuevo->precio=$datos->input('precio');
+        $nuevo->categoria_id=$datos->input('id_categoria');
+        $nuevo->imagen=$datos->input('imagen');
+        $nuevo->save();
+        return redirect('/consultarP');
+   }
+
+   public function consultarP(){
+      $productos = Producto::all();
+      return view('inventarioProductos', compact('productos'))  ;
+   }
 
 }

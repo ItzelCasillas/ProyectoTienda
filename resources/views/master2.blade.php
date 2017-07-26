@@ -54,10 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Líquidos Matte</a></li>
-											<li><a href="mens.html">Líquidos Metálicos</a></li>
-											<li><a href="mens.html">En barra</a></li>
-											<li><a href="mens.html">Brillos</a></li>
+										
 										</ul>
 									</div>
 									<!-- <div class="col-sm-3 multi-gd-img">

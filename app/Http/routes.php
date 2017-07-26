@@ -28,6 +28,12 @@ Route::get('/admin', function (){
 
 
 Route::get('/altaCategoria', 'tiendaController@registrarCategoria');
+Route::post('/guardarCat', 'tiendaController@guardarCat');
+Route::get('/consultarCat', 'tiendaController@consultarCat');
+Route::get('/eliminarCat/{id}', 'tiendaController@eliminarCat');
+Route::get('/editarCat/{id}', 'tiendaController@editarCat');
+Route::post('/actualizarCat/{id}', 'tiendaController@actualizarCat');
+// Route::get('/master2', 'tiendaController@master2');
 
 
 

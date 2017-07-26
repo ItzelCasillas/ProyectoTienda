@@ -1,4 +1,4 @@
-@extends('master2')
+@extends('vistaextra')
 
 @section('contenido')
 <form action="{{url('/guardarProducto')}}" method="POST">

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Producto;
+use App\Category;
+use DB;
 
 class tiendaController extends Controller
 {
@@ -39,39 +41,49 @@ class tiendaController extends Controller
     	// return redirect('/');
 
     }
-   public function registrarCat(){
-        $categories=Category::all();
-        return view('registrarCat', compact('categories'));
-   }
+
+     public function registrarCategoria(){
+      // $clientes=Cliente::all();
+      return view('registrarCategoria');
+    }
 
    public function guardarCat(Request $datos){
-       $categories = new Category();
-         $categories->nombre=$datos->input('name');
-        $categories->save();
-        return redirect('/consultarCat');
+       $categoria = new Category();
+        $categoria->nombre=$datos->input('nombre');
+        $categoria->save();
+        return redirect('/admin');
    }
 
        public function eliminarCat($id){
-         $categories=Category::find($id);
-         $categories->delete();
-         return redirect('/consultarCat');
+         $categoria=Category::find($id);
+         $categoria->delete();
+         return redirect('/admin');
    }
 
    public function editarCat($id){
          //$proyecto=Proyecto::find($id);
-         $categories=DB::table('categories')
-         ->where('categories.id', '=', $id)
+         $categoria=DB::table('categorias')
+         ->where('categorias.id', '=', $id)
          ->first();
-         $categorie=Category::all();
-         return view('editarCat', compact('categories', 'categorie'));
+         return view('editarCategoria', compact('categoria'));
    }
 
       public function actualizarCat($id, Request $datos){
-         $categories=Category::find($id);
-         $categories->name=$datos->input('name');
-         $categories->save();
-         return redirect('/consultarCat');
+         $categorias=Category::find($id);
+         $categorias->nombre=$datos->input('nombre');
+         $categorias->save();
+         return redirect('/admin');
+   }  
+
+   public function consultarCat(){
+      $categorias = Category::all();
+      return view('consultarCategorias', compact('categorias'));
    }
+ 
+  // public function master2{
+  //   $categorias = Category::all();
+  //     return view('master2', compact('categorias'));
+  // }
 
    public function registrarP(){
         return view('registrarProductos');

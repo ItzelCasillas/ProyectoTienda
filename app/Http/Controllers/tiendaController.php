@@ -109,12 +109,11 @@ class tiendaController extends Controller
    }
 
   public function redirectTo(){
-    if(auth()->user()->rol==1){
+        if(auth()->user()->rol==1){
             return view('/admin');
         }
         else{
             return view('/master');
         }
-        
     }
 }

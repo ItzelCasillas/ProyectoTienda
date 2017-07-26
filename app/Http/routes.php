@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get('/registrarCliente', 'tiendaController@registrarC');
 Route::get('/inicioSesion', 'tiendaController@inicioSesion');
+
 Route::post('/guardarCliente', 'tiendaController@guardar');
 
 Route::get('/vistaAdmin', 'tiendaController@vistaAdmin');
@@ -36,3 +37,4 @@ Route::get('/consultarProducto', 'tiendaController@consultarP');
 Route::get('/home', 'HomeController@index');
 
 Route::auth();
+Route::post('/login', 'tiendaController@redirectTo');

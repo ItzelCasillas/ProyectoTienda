@@ -86,10 +86,12 @@ class tiendaController extends Controller
   // }
 
    public function registrarP(){
-        return view('registrarProductos');
+        $categoria=Category::all();
+        return view('registrarProductos', compact('categoria'));
     }
 
     public function guardarP(Request $datos){
+
         $nuevo = new Producto();
         $nuevo->nombre=$datos->input('nombre');
         $nuevo->descripcion=$datos->input('descripcion');

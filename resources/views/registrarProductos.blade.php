@@ -5,18 +5,21 @@
 <input id="token" type="hidden" name="_token" value="{{csrf_token() }}">
 
     <div class="form-group">
-        <label for="id_categoria">Categoría:</label>
-        <select name="id_categoria" class="form-control">
-            <option value="1">1</option>
-        </select>
-    </div>
-    <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" name="nombre" required>
     </div>
     <div class="form-group">
         <label for="descripcion">Descripcion:</label>
         <input type="text" class="form-control" name="descripcion" required>
+    </div>
+    <div class="form-group" >
+        <label for="categoria">Categoria:</label>
+        <select name="categoria" class="form-control" id="selectFiltro">
+            <option value="%" disabled="" selected="">Seleccione Categoria</option>
+            @foreach($categoria as $c)
+                <option value="{{$c->id}}">{{$c->nombre}}</option>
+            @endforeach  
+        </select>
     </div>
     <div class="form-group">
         <label for="cantidad">Cantidad:</label>

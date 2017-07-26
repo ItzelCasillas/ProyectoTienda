@@ -75,10 +75,10 @@ class RegisterController extends Controller
 
         public function redirectTo(){
         if(auth()->user()->rol==1){
-            return '/admin';
+            return view('/admin');
         }
         else{
-            return '/master';
+            return view('/master');
         }
     }
 }

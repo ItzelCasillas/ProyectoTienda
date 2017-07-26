@@ -108,12 +108,13 @@ class tiendaController extends Controller
       return view('inventarioProductos', compact('productos'))  ;
    }
 
-   public function redirectTo(){
-        if(auth()->user()->rol==1){
+  public function redirectTo(){
+    if(auth()->user()->rol==1){
             return view('/admin');
         }
         else{
             return view('/master');
         }
+        
     }
 }

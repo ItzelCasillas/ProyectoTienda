@@ -1,4 +1,4 @@
-@extends('master2')
+@extends('vistaextra')
 
 @section('contenido')
 <div class="container">
@@ -54,7 +54,7 @@
                                     <i class="fa fa-btn fa-sign-in"></i> Entrar
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">Olvidaste tu contraseña?</a>
+                                <a class="btn btn-link" href="{{ url('/password/reset') }}">¿Olvidaste tu contraseña?</a>
                             </div>
                         </div>
                     </form>

@@ -94,4 +94,9 @@ class tiendaController extends Controller
       return view('inventarioProductos', compact('productos'))  ;
    }
 
+    public function registrarCategoria(){
+      // $clientes=Cliente::all();
+      return view('registrarCategoria');
+    }
+
 }

@@ -77,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="menu__item dropdown menu__item--current">
 					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Categorías <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="">Alta Categoría</a></li>
+									<li><a href="{{url('/altaCategoria')}}">Alta Categoría</a></li>
 									<li><a href="">Consulta Categoría</a></li>
 								</ul>
 					</li>
@@ -91,11 +91,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!-- //banner-top -->
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1>Bienvenido al sistema de administración</h1>
   <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-</div>											
-					
+</div>	 -->										
+				
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+    @yield('contenido')
+    </div>
+  </div>
+</div>
+<br>					
 		
 <div class="footer">
 	<div class="footer_agile_inner_info_w3l">

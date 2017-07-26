@@ -27,6 +27,9 @@ Route::get('/admin', function (){
 })->middleware('auth');
 
 
+Route::get('/altaCategoria', 'tiendaController@registrarCategoria');
+
+
 
 Route::get('/master', 'HomeController@index')->name('master');
 Route::get('/altaProductos', 'tiendaController@registrarP');

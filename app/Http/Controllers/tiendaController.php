@@ -109,7 +109,8 @@ class tiendaController extends Controller
 
    public function registrarP(){
         $categoria=Category::all();
-        return view('registrarProductos', compact('categoria'));
+        $marca=Marca::all();
+        return view('registrarProductos', compact('categoria', 'marca'));
     }
 
    /*public function registrarP(){
@@ -125,6 +126,7 @@ class tiendaController extends Controller
         $nuevo->cantidad=$datos->input('cantidad');
         $nuevo->precio=$datos->input('precio');
         $nuevo->categoria_id=$datos->input('id_categoria');
+        $nuevo->marca_id=$datos->input('id_marca');
         $nuevo->imagen=$datos->input('imagen');
         $nuevo->save();
         return redirect('/consultarProducto');

@@ -8,6 +8,7 @@
 			<th>ID</th>
 			<th>Nombre</th>
 			<th>Categoria</th>
+			<th>Marca</th>
 			<th>Descripción</th>
 			<th>Precio</th>
 			<th>Cantidad</th>
@@ -23,6 +24,7 @@
 			<td>{{$p->id}}</td>
 			<td>{{$p->nombre}}</td>
 			<td>{{$p->categoria_id}}</td>
+			<td>{{$p->marca_id}}</td>
 			<td>{{$p->descripcion}}</td>
 			<td>{{$p->precio}}</td>
 			<td>{{$p->cantidad}}</td>

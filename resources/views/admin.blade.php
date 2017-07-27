@@ -81,7 +81,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><a href="{{url('/consultarCat')}}">Consulta Categoría</a></li>
 								</ul>
 					</li>
-
+							<li class="menu__item dropdown menu__item--current">
+					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Marca <b class="caret"></b></a>
+								<ul class="dropdown-menu agile_short_dropdown">
+									<li><a href="{{url('/altaMarca')}}">Alta Marca</a></li>
+									<li><a href="{{url('/consultarMarcas')}}">Consulta Marcas</a></li>
+								</ul>
+					</li>
 				  </ul>
 				</div>
 			  </div>

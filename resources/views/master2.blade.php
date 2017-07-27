@@ -45,6 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </button>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
+			
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="dropdown menu__item">
@@ -56,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-										
+										<li><a href="womens.html">ColourPop</a></li>
 										</ul>
 									</div>
 									<!-- <div class="col-sm-3 multi-gd-img">

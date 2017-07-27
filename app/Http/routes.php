@@ -34,9 +34,14 @@ Route::get('/consultarCat', 'tiendaController@consultarCat');
 Route::get('/eliminarCat/{id}', 'tiendaController@eliminarCat');
 Route::get('/editarCat/{id}', 'tiendaController@editarCat');
 Route::post('/actualizarCat/{id}', 'tiendaController@actualizarCat');
-// Route::get('/master2', 'tiendaController@master2');
+Route::get('/master2', 'tiendaController@master2');
 
-
+Route::get('/altaMarca', 'tiendaController@registrarMarca');
+Route::post('/guardarMarca', 'tiendaController@guardarMarca');
+Route::get('/consultarMarcas', 'tiendaController@consultarMarcas');
+Route::get('/eliminarMarca/{id}', 'tiendaController@eliminarMarca');
+Route::get('/editarMarca/{id}', 'tiendaController@editarMarca');
+Route::post('/actualizarMarca/{id}', 'tiendaController@actualizarMarca');
 
 Route::get('/master', 'HomeController@index')->name('master');
 Route::get('/altaProductos', 'tiendaController@registrarP');

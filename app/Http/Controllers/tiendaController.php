@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Producto;
 use App\Category;
+use App\Marca;
 use DB;
 
 class tiendaController extends Controller
@@ -25,23 +26,6 @@ class tiendaController extends Controller
       return view('admin');
     }
 
-     public function guardar(Request $datos){
-    	// $cliente = new Cliente();
-    	// $cliente->nombre=$datos->input('nombre');
-    	// $cliente->correo=$datos->input('correo');
-    	// $cliente->fecha_nacimiento=$datos->input('fecha_nacimiento');
-    	// $cliente->sexo=$datos->input('sexo');
-    	// $cliente->ocupacion=$datos->input('ocupacion');
-    	// $cliente->save();
-     //    flash('Gracias por registrarte!') -> success();
-     //    Mail::send('emails', ['cliente' => $cliente], function($message) use ($cliente){
-     //            $message->from('agencontacto@gmail.com', 'Mazda México');
-     //            $message->to($cliente->correo, $cliente->nombre)->subject('Gracias por registrarte ' . $cliente->nombre);
-     //    });
-    	// return redirect('/');
-
-    }
-
      public function registrarCategoria(){
       // $clientes=Cliente::all();
       return view('registrarCategoria');
@@ -51,13 +35,13 @@ class tiendaController extends Controller
        $categoria = new Category();
         $categoria->nombre=$datos->input('nombre');
         $categoria->save();
-        return redirect('/admin');
+        return redirect('/consultarCat');
    }
 
        public function eliminarCat($id){
          $categoria=Category::find($id);
          $categoria->delete();
-         return redirect('/admin');
+         return redirect('/consultarCat');
    }
 
    public function editarCat($id){
@@ -72,7 +56,7 @@ class tiendaController extends Controller
          $categorias=Category::find($id);
          $categorias->nombre=$datos->input('nombre');
          $categorias->save();
-         return redirect('/admin');
+         return redirect('/consultarCat');
    }  
 
    public function consultarCat(){
@@ -80,10 +64,48 @@ class tiendaController extends Controller
       return view('consultarCategorias', compact('categorias'));
    }
  
-  // public function master2{
-  //   $categorias = Category::all();
-  //     return view('master2', compact('categorias'));
-  // }
+  public function master2(){
+    $categorias = Category::all();
+      return view('master2', compact('categorias'));
+  }
+
+  public function registrarMarca(){
+      // $clientes=Cliente::all();
+      return view('registrarMarca');
+    }
+
+   public function guardarMarca(Request $datos){
+        $marca = new Marca();
+        $marca->nombre=$datos->input('nombre');
+        $marca->save();
+        return redirect('/consultarMarcas');
+   }
+
+       public function eliminarMarca($id){
+         $marca=Marca::find($id);
+         $marca->delete();
+         return redirect('/consultarMarcas');
+   }
+
+   public function editarMarca($id){
+         //$proyecto=Proyecto::find($id);
+         $marca=DB::table('marca')
+         ->where('marca.id', '=', $id)
+         ->first();
+         return view('editarMarca', compact('marca'));
+   }
+
+      public function actualizarMarca($id, Request $datos){
+         $marcas=Marca::find($id);
+         $marcas->nombre=$datos->input('nombre');
+         $marcas->save();
+         return redirect('/consultarMarcas');
+   }  
+
+   public function consultarMarcas(){
+      $marcas = Marca::all();
+      return view('consultarMarcas', compact('marcas'));
+   }
 
    public function registrarP(){
         return view('registrarProductos');

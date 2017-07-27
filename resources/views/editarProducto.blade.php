@@ -2,6 +2,7 @@
 @extends('master')
 
 @section('contenido')
+
 <form action="{{url('/')}}/{{$->}}" method="POST">
 
     <div class="form-group">

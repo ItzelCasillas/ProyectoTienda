@@ -72,13 +72,6 @@ class RegisterController extends Controller
             'rol' => 1,
         ]);
     }
-
-        public function redirectTo(){
-        if(auth()->user()->rol==1){
-            return '/admin';
-        }
-        else{
-            return '/master';
-        }
+    
     }
 }

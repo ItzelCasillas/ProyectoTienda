@@ -108,11 +108,13 @@ class tiendaController extends Controller
    }
 
    public function registrarP(){
-        return view('registrarProductos');
+        $categoria=Category::all();
+        return view('registrarProductos', compact('categoria'));
     }
 
     public function guardarP(Request $datos){
-       $nuevo = new Producto();
+
+        $nuevo = new Producto();
         $nuevo->nombre=$datos->input('nombre');
         $nuevo->descripcion=$datos->input('descripcion');
         $nuevo->cantidad=$datos->input('cantidad');
@@ -120,7 +122,7 @@ class tiendaController extends Controller
         $nuevo->categoria_id=$datos->input('id_categoria');
         $nuevo->imagen=$datos->input('imagen');
         $nuevo->save();
-        return redirect('/consultarP');
+        return redirect('/consultarProducto');
    }
 
    public function consultarP(){
@@ -128,7 +130,7 @@ class tiendaController extends Controller
       return view('inventarioProductos', compact('productos'))  ;
    }
 
-   public function redirectTo(){
+  public function redirectTo(){
         if(auth()->user()->rol==1){
             return view('/admin');
         }

@@ -1,4 +1,4 @@
-@extends('vistaextra')
+@extends('admin')
 
 @section('contenido')
 <form action="{{url('/guardarProducto')}}" method="POST">
@@ -21,6 +21,15 @@
             @endforeach  
         </select>
     </div>
+        <!--<div class="form-group" >
+        <label for="marca">Marca:</label>
+        <select name="marca" class="form-control" id="selectFiltro">
+            <option value="%" disabled="" selected="">Seleccione Marca</option>
+            @foreach($marca as $m)
+                <option value="{{$m->id}}">{{$m->nombre}}</option>
+            @endforeach  
+        </select>
+    </div>-->
     <div class="form-group">
         <label for="cantidad">Cantidad:</label>
         <input type="number" class="form-control" name="cantidad" required>

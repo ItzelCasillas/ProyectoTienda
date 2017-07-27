@@ -112,6 +112,11 @@ class tiendaController extends Controller
         return view('registrarProductos', compact('categoria'));
     }
 
+   /*public function registrarP(){
+      // $clientes=Cliente::all();
+      return view('registrarProducto');
+    }*/
+
     public function guardarP(Request $datos){
 
         $nuevo = new Producto();
@@ -125,8 +130,36 @@ class tiendaController extends Controller
         return redirect('/consultarProducto');
    }
 
+       public function eliminarP($id){
+         $nuevo=Producto::find($id);
+         $nuevo->delete();
+         return redirect('/inventarioProductos');
+   }
+
+   public function editarP($id){
+         //$proyecto=Proyecto::find($id);
+         $nuevo=DB::table('productos')
+         ->where('productos.id', '=', $id)
+         ->select('productos.*')
+         ->first();
+         return view('editarProducto', compact('nuevo')); //nuevo???
+   }
+
+      public function actualizarP($id, Request $datos){
+        $nuevo=Producto::find($id);
+        $nuevo->nombre=$datos->input('nombre');
+        $nuevo->descripcion=$datos->input('descripcion');
+        $nuevo->cantidad=$datos->input('cantidad');
+        $nuevo->precio=$datos->input('precio');
+        $nuevo->categoria_id=$datos->input('id_categoria');
+        $nuevo->imagen=$datos->input('imagen');
+
+        $nuevo->save();
+         return redirect('/i');
+   }
+
    public function consultarP(){
-      $productos = Producto::all();
+      $producto = Producto::all();
       return view('inventarioProductos', compact('productos'))  ;
    }
 

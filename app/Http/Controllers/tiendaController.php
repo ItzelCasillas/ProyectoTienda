@@ -125,8 +125,8 @@ class tiendaController extends Controller
         $nuevo->descripcion=$datos->input('descripcion');
         $nuevo->cantidad=$datos->input('cantidad');
         $nuevo->precio=$datos->input('precio');
-        $nuevo->categoria_id=$datos->input('id_categoria');
-        $nuevo->marca_id=$datos->input('id_marca');
+        $nuevo->categoria_id=$datos->input('categoria');
+        $nuevo->marca_id=$datos->input('marca');
         $nuevo->imagen=$datos->input('imagen');
         $nuevo->save();
         return redirect('/consultarProducto');
@@ -162,7 +162,7 @@ class tiendaController extends Controller
 
    public function consultarP(){
       $producto = Producto::all();
-      return view('inventarioProductos', compact('productos'))  ;
+      return view('inventarioProductos', compact('producto'))  ;
    }
 
   public function redirectTo(){

@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="dropdown menu__item">
+					<!-- <li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Labiales <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
@@ -60,22 +60,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="womens.html">ColourPop</a></li>
 										</ul>
 									</div>
-									<!-- <div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Jewellery</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Perfumes</a></li>
-											<li><a href="mens.html">Beauty</a></li>
-											<li><a href="mens.html">Shirts</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Swimwear</a></li>
-										</ul>
-									</div> -->
 									<div class="clearfix"></div>
 								</div>
 							</ul>
-					</li>
-					<li class="dropdown menu__item">
+					</li> -->
+					<!-- <li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Marcas <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
@@ -89,22 +78,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="womens.html">Urban Decay</a></li>
 										</ul>
 									</div>
-								<!-- 	<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">ColourPop</a></li>
-											<li><a href="womens.html">Kylie Jenner</a></li>
-											<li><a href="womens.html">Lime Crime</a></li>
-											<li><a href="womens.html">Makeup Forever</a></li>
-											<li><a href="womens.html">Makeup Geek</a></li>
-										</ul>
-									</div> -->
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
 										<a href="womens.html"><img src="imagenes/carrusel/LIPBEAUTY.jpg" alt=" "/></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
 							</ul>
-					</li>
+					</li> -->
 					<!-- <li class="menu__item dropdown">
 					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
@@ -112,8 +92,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><a href="typography.html">Typography</a></li>
 								</ul>
 					</li> -->
-					<li class=" menu__item"><a class="menu__link" href="about.html">Acerca de</a></li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">Contactanos</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{url('/catalogo')}}">Catálogo</a></li>
+					<li class=" menu__item"><a class="menu__link" href="">Acerca de</a></li>
+					<li class=" menu__item"><a class="menu__link" href="">Contactanos</a></li>
 				  </ul>
 				</div>
 			  </div>

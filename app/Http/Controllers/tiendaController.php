@@ -107,6 +107,13 @@ class tiendaController extends Controller
       return view('consultarMarcas', compact('marcas'));
    }
 
+   public function catalogo(){
+      // $clientes=Cliente::all();
+     $tipo=Category::all();
+        $marca=Marca::all();
+      return view('catalogo', compact('tipo', 'marca'));
+    }
+
    public function registrarP(){
         $categoria=Category::all();
         $marca=Marca::all();

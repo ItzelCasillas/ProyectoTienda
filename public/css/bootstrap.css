@@ -4291,8 +4291,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-form .form-control {
     display: inline-block;
-    width: auto;
     vertical-align: middle;
+
   }
   .navbar-form .form-control-static {
     display: inline-block;
@@ -6589,5 +6589,12 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+ #select1, #select2, #btnBuscar{
+    display: inline-block;
+  }
+#btnBuscar{
+  background-color: #fc636b;
+  border-color: #fc636b;
 }
 /*# sourceMappingURL=bootstrap.css.map */

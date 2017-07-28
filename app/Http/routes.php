@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('master');
 });
 
+Route::get('importExport', 'tiendaController@importExport');
+Route::get('downloadExcel/{type}', 'tiendaController@downloadExcel');
+Route::post('importExcel', 'TiendaController@importExcel');
+Route::get('/altaCSV', 'tiendaController@csv');
+
+
 Route::get('/registrarCliente', 'tiendaController@registrarC');
 Route::get('/inicioSesion', 'tiendaController@inicioSesion');
 

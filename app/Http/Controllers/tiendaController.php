@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Producto;
 use App\Category;
 use App\Marca;
+use App\csv;
+use Excel;
 use DB;
 
 class tiendaController extends Controller
@@ -184,4 +186,51 @@ class tiendaController extends Controller
             return view('/master');
         }
     }
+
+     public function csv(){
+      // $clientes=Cliente::all();
+      return view('csv');
+    }
+
+  public function downloadExcel(Request $request, $type)
+  {
+    $data = csv::get()->toArray();
+    return Excel::create('itsolutionstuff_example', function($excel) use ($data) {
+      $excel->sheet('mySheet', function($sheet) use ($data)
+          {
+        $sheet->fromArray($data);
+          });
+    })->download($type);
+  }
+
+  public function importExcel(Request $request)
+  {
+
+    if($request->hasFile('import_file')){
+      $path = $request->file('import_file')->getRealPath();
+
+      $data = Excel::load($path, function($reader) {})->get();
+
+      if(!empty($data) && $data->count()){
+
+        foreach ($data->toArray() as $key => $value) {
+          if(!empty($value)){
+            foreach ($value as $v) {    
+              $insert[] = ['categoria' => $v['categoria'], 'marca' => $v['marca'], 'nombre' => $v['nombre'], 'descripcion' => $v['descripcion'], 'precio' => $v['precio'], 'estado' => $v['estado'], 'cantidad' => $v['cantidad']];
+            }
+          }
+        }
+
+        
+        if(!empty($insert)){
+          csv::insert($insert);
+          return back()->with('success','Insert Record successfully.');
+        }
+
+      }
+
+    }
+
+    return back()->with('error','Please Check your file, Something is wrong there.');
+  }
 }

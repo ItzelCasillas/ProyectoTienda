@@ -27,6 +27,7 @@
 			<td>{{$p->descripcion}}</td>
 			<td>{{$p->precio}}</td>
 			<td>{{$p->cantidad}}</td>
+			<td><img src="public/imagenes/productos/producto.jpg"></td>
 			<td>
 			</td>
 			<td>{{$p->estado}}</td>

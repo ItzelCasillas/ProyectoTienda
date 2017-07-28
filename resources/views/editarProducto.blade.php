@@ -41,7 +41,7 @@
     </div>
     <div class="form-group">
         <label for="imagen">Imagen:</label>
-        <input type="text" class="form-control" name="imagen" required value="{{$producto->imagen}}">
+        <img src="public/imagenes/productos/producto.jpg">
     </div>
 
     <div>

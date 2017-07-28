@@ -31,7 +31,7 @@
         	@foreach($productos as $p)
 		<!-- <h3>{{$p->nombre}}</h3>
 		<img src="imagenes/4.jpg" width='250'> -->
-		<div class="resp-tabs-container">
+		<div class="resp-tabs-containern">
 					<!--/tab_one-->
 						<div class="tab1">
 							<div class="col-md-3 product-men">

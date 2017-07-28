@@ -16,11 +16,7 @@
     <div class="form-group" >
         <label for="categoria">Categoria:</label>
         <select name="categoria" class="form-control" id="selectFiltro">
-<<<<<<< HEAD
-            <option value="%" disabled="" selected value="">Seleccione Categoria</option>
-=======
         <option selected value="{{$producto->categoria_id}}">{{$producto->nombre}}</option>
->>>>>>> b0224a927c07b5a8c9c8c64f7b96661812ae71f7
             @foreach($categoria as $c)
                 <option value="{{$c->id}}">{{$c->nombre}}</option>
             @endforeach  

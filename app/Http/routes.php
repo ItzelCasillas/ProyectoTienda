@@ -59,6 +59,7 @@ Route::get('/editarProducto/{id}', 'tiendaController@editarP');
 Route::post('/actualizarProducto/{id}', 'tiendaController@actualizarP');
 
 Route::get('/catalogo', 'tiendaController@catalogo');
+Route::post('/filtrar', 'tiendaController@filtrar');
 Route::get('/single/{id}', 'tiendaController@single');
 
 

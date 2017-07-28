@@ -1,7 +1,7 @@
 @extends('master2')
 
 @section('contenido')
-<form action="" class="navbar-form navbar-left" role="search" method="POST">
+<form action="{{url('/filtrar')}}" class="navbar-form navbar-left" role="search" method="POST">
 	<input id ="token" type="hidden" name="_token" value="{{csrf_token() }}">
 	<label for="nombre">Filtro</label> <br>
 	 <div  id="select1">

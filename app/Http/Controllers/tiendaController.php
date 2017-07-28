@@ -121,6 +121,18 @@ class tiendaController extends Controller
       return view('single', compact('producto'));
     }
 
+    public function filtrar(){
+      $lista = new Producto();
+        $categoria = $nombre->input("categoria");
+        $marca = $nombre->input("marca");
+        $clientes=DB::table('productos')
+        ->where('categoria_id', 'like', $categoria)
+        ->where('marca_id', 'like', $marca)
+        ->get();
+   
+        return view('catalogo', compact('clientes'));
+    }
+
    public function registrarP(){
         $categoria=Category::all();
         $marca=Marca::all();

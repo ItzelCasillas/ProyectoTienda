@@ -139,12 +139,16 @@ class tiendaController extends Controller
    }
 
    public function editarP($id){
-         //$proyecto=Proyecto::find($id);
+
          $nuevo=DB::table('productos')
-         ->where('productos.id', '=', $id)
-         ->select('productos.*')
-         ->first();
-         return view('editarProducto', compact('nuevo')); //nuevo???
+            ->where('productos.id', '=',$id)
+            ->join('categorias', 'categorias.id', '=', 'productos.categoria_id')
+            ->join('marca', 'marca.id', '=', 'productos.marca_id')
+            ->select('productos.*', 'categorias.nombre')
+            ->first();
+            $categoria=Category::all();
+            $marca=Marca::all();
+        return view('editarProducto', compact('nuevo', 'categoria', 'marca'));
    }
 
       public function actualizarP($id, Request $datos){
@@ -162,7 +166,7 @@ class tiendaController extends Controller
 
    public function consultarP(){
       $producto = Producto::all();
-      return view('inventarioProductos', compact('producto'))  ;
+      return view('inventarioProductos', compact('producto'));
    }
 
   public function redirectTo(){

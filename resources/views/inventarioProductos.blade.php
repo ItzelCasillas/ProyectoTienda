@@ -35,7 +35,7 @@
 			</td>
 			<td>{{$p->estado}}</td>
 			<td>
-				<a href="{{url('/editarP')}}/{{$p->id}}" class="btn btn-xs btn-info">
+				<a href="{{url('/editarProducto')}}/{{$p->id}}" class="btn btn-xs btn-info">
 					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 				</a>
 				<a href="{{url('/eliminarP')}}/{{$p->id}}" class="btn btn-xs btn-primary">

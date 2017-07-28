@@ -34,10 +34,12 @@
 				</button>-->
 			</td>
 			<td>{{$p->estado}}</td>
+
 			<td>	
-				<a href="{{url('/editarP')}}/{{$p->id}}" class="btn btn-xs btn-primary">
+				
+				<a href="{{url('/editarProducto')}}/{{$p->id}}" class="btn btn-xs btn-primary">
 					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-				</a>
+				</a>	
 				<a href="{{url('/eliminarP')}}/{{$p->id}}" class="btn btn-xs btn-danger">
 					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 				</a>

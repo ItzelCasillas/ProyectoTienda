@@ -110,10 +110,15 @@ class tiendaController extends Controller
    }
 
    public function catalogo(){
-      // $clientes=Cliente::all();
+      $productos=Producto::all();
      $tipo=Category::all();
         $marca=Marca::all();
-      return view('catalogo', compact('tipo', 'marca'));
+      return view('catalogo', compact('tipo', 'marca', 'productos'));
+    }
+
+    public function single($id){
+        $producto=Producto::find($id);
+      return view('single', compact('producto'));
     }
 
    public function registrarP(){

@@ -6597,4 +6597,9 @@ button.close {
   background-color: #fc636b;
   border-color: #fc636b;
 }
+
+#cat{
+  display: inline-block;
+
+}
 /*# sourceMappingURL=bootstrap.css.map */

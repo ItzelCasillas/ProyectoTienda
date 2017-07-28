@@ -16,7 +16,7 @@
     <div class="form-group" >
         <label for="categoria">Categoria:</label>
         <select name="categoria" class="form-control" id="selectFiltro">
-            <option value="%" disabled="" selected="">Seleccione Categoria</option>
+            <option value="%" disabled="" selected value="">Seleccione Categoria</option>
             @foreach($categoria as $c)
                 <option value="{{$c->id}}">{{$c->nombre}}</option>
             @endforeach  

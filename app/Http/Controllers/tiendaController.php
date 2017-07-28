@@ -139,12 +139,17 @@ class tiendaController extends Controller
    }
 
    public function editarP($id){
-         //$proyecto=Proyecto::find($id);
+         /*$proyecto=Proyecto::find($id);
          $nuevo=DB::table('productos')
          ->where('productos.id', '=', $id)
          ->select('productos.*')
          ->first();
-         return view('editarProducto', compact('nuevo')); //nuevo???
+         return view('editarProducto', compact('nuevo')); */
+
+         $nuevo = Producto::find($id);
+         $categoria = Category::all();
+         $marca = Marca::all();
+         return view('editarProducto', compact('nuevo', 'categoria', 'marca'));
    }
 
       public function actualizarP($id, Request $datos){
@@ -154,10 +159,11 @@ class tiendaController extends Controller
         $nuevo->cantidad=$datos->input('cantidad');
         $nuevo->precio=$datos->input('precio');
         $nuevo->categoria_id=$datos->input('id_categoria');
+        $nuevo->marca_id=$datos->input('id_marca');
         $nuevo->imagen=$datos->input('imagen');
 
         $nuevo->save();
-         return redirect('/i');
+         return redirect('/inventarioProductos');
    }
 
    public function consultarP(){

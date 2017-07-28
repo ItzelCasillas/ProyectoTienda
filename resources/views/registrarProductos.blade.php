@@ -44,8 +44,8 @@
     </div>
 
     <div>
-        <button type:"submit" class="btn btn-primary">Guardar producto</button>
-        <a href="{{url('/')}}" class="btn btn-danger">Cancelar</a>
+        <button type:"submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+        <a href="{{url('/')}}" class="btn btn-danger" id="btnCancelar">Cancelar</a>
     </div>
 </form>
 

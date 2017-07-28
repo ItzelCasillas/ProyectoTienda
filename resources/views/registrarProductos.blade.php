@@ -39,8 +39,9 @@
         <input type="number" class="form-control" name="precio" required>
     </div>
     <div class="form-group">
-        <label for="imagen">Imagen:</label>
-        <input type="text" class="form-control" name="imagen" required>
+        <label for="imagen">Imagen</label>
+        <div><img src="public/imagenes/productos/producto.jpg"></div>
+        
     </div>
 
     <div>

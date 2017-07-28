@@ -2,21 +2,21 @@
 
 @section('contenido')
 
-<form action="{{url('/actualizarP')}}/{{$nuevo->id}}" method="POST">
+<form action="{{url('/actualizarProducto')}}/{{$producto->id}}" method="POST">
 <input id="token" type="hidden" name="_token" value="{{csrf_token() }}">
 
     <div class="form-group">
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" name="nombre" required value="{{$nuevo->nombre}}">
+        <input type="text" class="form-control" name="nombre" required value="{{$producto->nombre}}">
     </div>
     <div class="form-group">
         <label for="descripcion">Descripcion:</label>
-        <input type="text" class="form-control" name="descripcion" required value="{{$nuevo->descripcion}}">
+        <input type="text" class="form-control" name="descripcion" required value="{{$producto->descripcion}}">
     </div>
     <div class="form-group" >
         <label for="categoria">Categoria:</label>
         <select name="categoria" class="form-control" id="selectFiltro">
-            <option value="%" disabled="" selected="">Seleccione Categoria</option>
+        <option selected value="{{$producto->categoria_id}}">{{$producto->nombre}}</option>
             @foreach($categoria as $c)
                 <option value="{{$c->id}}">{{$c->nombre}}</option>
             @endforeach  
@@ -25,7 +25,7 @@
     <div class="form-group">
         <label for="marca">Marca:</label>
         <select name="marca" class="form-control" id="selectFiltro">
-            <option value="%" disabled="" selected="">Seleccione Marca</option>
+            <option selected value="{{$producto->marca_id}}">{{$producto->nombre}}</option>
             @foreach($marca as $m)
                 <option value="{{$m->id}}">{{$m->nombre}}</option>
             @endforeach  
@@ -33,15 +33,15 @@
     </div>
     <div class="form-group">
         <label for="cantidad">Cantidad:</label>
-        <input type="number" class="form-control" name="cantidad" required value="{{$nuevo->cantidad}}">
+        <input type="number" class="form-control" name="cantidad" required value="{{$producto->cantidad}}">
     </div>
     <div class="form-group">
         <label for="precio">Precio:</label>
-        <input type="number" class="form-control" name="precio" required value="{{$nuevo->precio}}">
+        <input type="number" class="form-control" name="precio" required value="{{$producto->precio}}">
     </div>
     <div class="form-group">
         <label for="imagen">Imagen:</label>
-        <input type="text" class="form-control" name="imagen" required value="{{$nuevo->imagen}}">
+        <input type="text" class="form-control" name="imagen" required value="{{$producto->imagen}}">
     </div>
 
     <div>

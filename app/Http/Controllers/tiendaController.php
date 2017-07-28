@@ -128,54 +128,54 @@ class tiendaController extends Controller
     }*/
 
     public function guardarP(Request $datos){
-
-        $nuevo = new Producto();
-        $nuevo->nombre=$datos->input('nombre');
-        $nuevo->descripcion=$datos->input('descripcion');
-        $nuevo->cantidad=$datos->input('cantidad');
-        $nuevo->precio=$datos->input('precio');
-        $nuevo->categoria_id=$datos->input('categoria');
-        $nuevo->marca_id=$datos->input('marca');
-        $nuevo->imagen=$datos->input('imagen');
-        $nuevo->save();
+        $producto = new Producto();
+        $producto->nombre=$datos->input('nombre');
+        $producto->descripcion=$datos->input('descripcion');
+        $producto->precio=$datos->input('precio');
+        $producto->categoria_id=$datos->input('categoria');
+        $producto->marca_id=$datos->input('marca');
+        $producto->imagen=$datos->input('imagen');
+        $producto->cantidad=$datos->input('cantidad');
+        $producto->save();
         return redirect('/consultarProducto');
    }
 
        public function eliminarP($id){
-         $nuevo=Producto::find($id);
-         $nuevo->delete();
-         return redirect('/inventarioProductos');
+         $producto=Producto::find($id);
+         $producto->delete();
+         return redirect('/consultarProducto');
    }
 
    public function editarP($id){
-         $nuevo=DB::table('productos')
+         $producto=DB::table('productos')
             ->where('productos.id', '=',$id)
             ->join('categorias', 'categorias.id', '=', 'productos.categoria_id')
             ->join('marca', 'marca.id', '=', 'productos.marca_id')
-            ->select('productos.*', 'categorias.nombre')
+            ->select('productos.*', 'categorias.nombre', 'marca.nombre')
             ->first();
             $categoria=Category::all();
             $marca=Marca::all();
-        return view('editarProducto', compact('nuevo', 'categoria', 'marca'));
+        return view('editarProducto', compact('producto', 'categoria', 'marca'));
    }
 
       public function actualizarP($id, Request $datos){
-        $nuevo=Producto::find($id);
-        $nuevo->nombre=$datos->input('nombre');
-        $nuevo->descripcion=$datos->input('descripcion');
-        $nuevo->cantidad=$datos->input('cantidad');
-        $nuevo->precio=$datos->input('precio');
-        $nuevo->categoria_id=$datos->input('id_categoria');
-        $nuevo->marca_id=$datos->input('id_marca');
-        $nuevo->imagen=$datos->input('imagen');
+        $producto=Producto::find($id);
+        $producto->nombre=$datos->input('nombre');
+        $producto->descripcion=$datos->input('descripcion');
+        $producto->categoria_id=$datos->input('categoria');
+        $producto->marca_id=$datos->input('marca');
+        $producto->cantidad=$datos->input('cantidad');
+        $producto->precio=$datos->input('precio');
+        $producto->imagen=$datos->input('imagen');
+        
 
-        $nuevo->save();
-         return redirect('/inventarioProductos');
+        $producto->save();
+         return redirect('/consultarProducto');
    }
 
    public function consultarP(){
-      $nuevo = Producto::all();
-      return view('inventarioProductos', compact('nuevo'));
+      $productos = Producto::all();
+      return view('inventarioProductos', compact('productos'));
    }
 
   public function redirectTo(){

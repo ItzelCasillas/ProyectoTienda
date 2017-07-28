@@ -7,11 +7,11 @@
 
     <div class="form-group">
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" name="nombre" required>
+        <input type="text" class="form-control" name="nombre" required value="{{$nuevo->nombre}}">
     </div>
     <div class="form-group">
         <label for="descripcion">Descripcion:</label>
-        <input type="text" class="form-control" name="descripcion" required>
+        <input type="text" class="form-control" name="descripcion" required value="{{$nuevo->descripcion}}">
     </div>
     <div class="form-group" >
         <label for="categoria">Categoria:</label>
@@ -33,15 +33,15 @@
     </div>
     <div class="form-group">
         <label for="cantidad">Cantidad:</label>
-        <input type="number" class="form-control" name="cantidad" required>
+        <input type="number" class="form-control" name="cantidad" required value="{{$nuevo->cantidad}}">
     </div>
     <div class="form-group">
         <label for="precio">Precio:</label>
-        <input type="number" class="form-control" name="precio" required>
+        <input type="number" class="form-control" name="precio" required value="{{$nuevo->precio}}">
     </div>
     <div class="form-group">
         <label for="imagen">Imagen:</label>
-        <input type="text" class="form-control" name="imagen" required>
+        <input type="text" class="form-control" name="imagen" required value="{{$nuevo->imagen}}">
     </div>
 
     <div>

@@ -165,8 +165,8 @@ class tiendaController extends Controller
    }
 
    public function consultarP(){
-      $producto = Producto::all();
-      return view('inventarioProductos', compact('producto'));
+      $nuevo = Producto::all();
+      return view('inventarioProductos', compact('nuevo'));
    }
 
   public function redirectTo(){
